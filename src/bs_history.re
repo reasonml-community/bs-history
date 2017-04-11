@@ -7,13 +7,14 @@ module History = {
     external hash : t => string = "" [@@bs.get];
     external key : t => option string = "" [@@bs.get];
   };
-  module Action = {
-    type t;
-  };
+  type action =
+    | Push
+    | Replace
+    | Pop;
   external length : t => int = "" [@@bs.get];
-  external action : t => Action.t = "" [@@bs.get];
-  external location : t => Location.t = "" [@@bs.get];
-  external listen : t => Location.t => Action.t => unit => unit = "" [@@bs.send];
+  external action : t => action = "" [@@bs.get];
+  external location : t => action = "" [@@bs.get];
+  external listen : t => Location.t => action => unit => unit = "" [@@bs.send];
   /* TODO: state typing */
   module State = {
     type t;
