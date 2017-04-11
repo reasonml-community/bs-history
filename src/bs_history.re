@@ -7,13 +7,10 @@ module History = {
     external hash : t => string = "" [@@bs.get];
     external key : t => option string = "" [@@bs.get] [@@bs.return null_undefined_to_opt];
   };
-  type action =
-    | Push
-    | Replace
-    | Pop;
+  type action = [ | `PUSH | `REPLACE | `POP] [@@bs.string];
   external length : t => int = "" [@@bs.get];
   external action : t => action = "" [@@bs.get];
-  external location : t => action = "" [@@bs.get];
+  external location : t => string = "" [@@bs.get];
   external listen : t => location::Location.t => action::action => unit => unit = "" [@@bs.send];
   /* TODO: state typing */
   module State = {
