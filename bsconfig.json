@@ -1,0 +1,6 @@
+{
+  "name" : "bs-express",
+  "sources" : [
+    "src"
+  ],
+}
