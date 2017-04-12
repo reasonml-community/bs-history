@@ -1,6 +1,6 @@
 {
-  "name" : "bs-express",
+  "name" : "bs-history",
   "sources" : [
     "src"
-  ],
+  ]
 }
