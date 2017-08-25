@@ -7,12 +7,13 @@
   "author": "Jiayu Liu <jiayu@madadata.com>",
   "license": "MIT",
   "scripts": {
-    "clean": "bsb -clean-world",
     "build": "bsb -make-world",
-    "start": "yarn run build -- -w"
+    "start": "bsb -make-world -w",
+    "clean": "bsb -clean-world",
+    "test": "exit 0"
   },
   "devDependencies": {
-    "bs-platform": "^1.8.2",
+    "bs-platform": "^1.9.0",
     "history": "^4.6.1"
   }
 }

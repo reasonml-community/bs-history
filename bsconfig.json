@@ -1,6 +1,5 @@
 {
-  "name" : "bs-history",
-  "sources" : [
-    "src"
-  ]
+  "name": "bs-history",
+  "bsc-flags": ["-bs-super-errors"],
+  "sources": ["src"]
 }
